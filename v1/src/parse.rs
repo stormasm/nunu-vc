@@ -110,7 +110,7 @@ fn parse_call(call: Command, _scope: &Box<Scope>) -> (SpannedExpression, Option<
 
         let mut args = vec![];
         for arg in call.elements.iter().skip(1) {
-            let (arg, error) = parse_expr(arg, ExpressionShape::Integer);
+            let (arg, error) = parse_expr(arg, ExpressionShape::String);
             if err.is_none() {
                 err = error;
             }

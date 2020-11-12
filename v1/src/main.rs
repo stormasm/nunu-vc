@@ -8,7 +8,7 @@ use language::{ExpressionShape, Scope};
 use parse::parse;
 
 fn main() {
-    let input1 = "this 34";
+    let input1 = "this rick";
     let mut commands = HashMap::new();
     commands.insert("this".to_string(), vec![ExpressionShape::Integer]);
 
