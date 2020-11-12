@@ -154,10 +154,16 @@ pub fn parse(
     scope: &Box<Scope>,
 ) -> (Vec<ExpressionGroup>, Option<ParseError>) {
     let (output, error) = lex(input, span_offset);
+
+    println!("{:#?}", output);
+
     if error.is_some() {
         return (vec![], error);
     }
     let (groups, error) = group(output);
+
+    println!("{:#?}", groups);
+
     if error.is_some() {
         return (vec![], error);
     }

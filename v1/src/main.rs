@@ -8,14 +8,16 @@ use language::{ExpressionShape, Scope};
 use parse::parse;
 
 fn main() {
-    let input1 = "this rick";
+    let input = "this rick";
     let mut commands = HashMap::new();
     commands.insert("this".to_string(), vec![ExpressionShape::Integer]);
+    commands.insert("that".to_string(), vec![ExpressionShape::Integer]);
 
     let scope = Box::new(Scope {
         parent: None,
         commands,
     });
 
-    println!("{:#?}", parse(input1, 0, &scope));
+    parse(input, 0, &scope);
+    //println!("{:?}", parse(input, 0, &scope));
 }
