@@ -141,6 +141,7 @@ impl ExpressionGroup {
     }
 }
 
+#[derive(Debug)]
 pub struct LiteBlock {
     pub groups: Vec<Group>,
 }
