@@ -1,0 +1,9 @@
+#!/bin/nu
+
+setenv MAX = "100"
+
+def handle [x y] {
+    set my-max = $nu.env.MAX
+
+    echo $my-max
+}

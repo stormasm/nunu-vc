@@ -1,0 +1,9 @@
+#!/bin/nu
+
+def greet [name] {
+  echo hello
+  echo $name
+}
+
+echo "Hello world"
+greet Bob
