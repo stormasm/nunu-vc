@@ -1,0 +1,13 @@
+## Shows how def works
+## design-discussion Nov 28, 2020
+
+def greet [name] {
+    def salute [] {
+        echo "Welcome"
+    }
+
+    salute
+    echo $name
+}
+
+greet Bob
